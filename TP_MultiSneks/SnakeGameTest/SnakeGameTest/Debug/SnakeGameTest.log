@@ -1,0 +1,9 @@
+﻿  Main.c
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(269): warning C4113: 'BOOL (__stdcall *)(LPVOID)' differs in parameter lists from 'PTIMERAPCROUTINE'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(280): warning C4013: 'kbhit' undefined; assuming extern returning int
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(281): warning C4013: '_getch' undefined; assuming extern returning int
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(166): warning C4716: 'MoveSnake': must return a value
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(206): warning C4716: 'RenderThread': must return a value
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\snakegametest\snakegametest\main.c(223): warning C4716: 'BuildMap': must return a value
+  SnakeGameTest.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\SnakeGameTest\Debug\SnakeGameTest.exe
+  SnakeGameTest.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\SnakeGameTest\Debug\SnakeGameTest.pdb (Full PDB)

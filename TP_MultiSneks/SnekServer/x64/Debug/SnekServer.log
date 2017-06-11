@@ -1,0 +1,12 @@
+﻿  ServerMain.c
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(40): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(int)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(40): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(int)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(45): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)()'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(50): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(TCHAR *)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(50): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(TCHAR *)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(55): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(TCHAR **)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(55): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(TCHAR **)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(60): warning C4133: '=': incompatible types - from 'FARPROC' to 'int (__cdecl *)()'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\snekserver\servermain.c(26): warning C4716: 'ReadCommand': must return a value
+  SnekServer.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SnekServer.exe
+  SnekServer.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SnekServer.pdb (Full PDB)

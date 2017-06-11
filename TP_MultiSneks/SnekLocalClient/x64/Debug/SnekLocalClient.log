@@ -1,0 +1,12 @@
+﻿  ClientMain.c
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(29): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(int)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(29): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(int)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(34): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)()'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(39): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(TCHAR *)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(39): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(TCHAR *)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(44): warning C4113: 'FARPROC' differs in parameter lists from 'BOOL (__cdecl *)(TCHAR **)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(44): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)(TCHAR **)'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(49): warning C4133: '=': incompatible types - from 'FARPROC' to 'BOOL (__cdecl *)()'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sneklocalclient\clientmain.c(21): warning C4101: 'getMessageSize': unreferenced local variable
+  SnekLocalClient.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SnekLocalClient.exe
+  SnekLocalClient.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SnekLocalClient.pdb (Full PDB)

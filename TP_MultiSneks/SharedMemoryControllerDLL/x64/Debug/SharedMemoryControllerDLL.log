@@ -1,0 +1,15 @@
+﻿  Main.c
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(135): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(206): warning C4996: '_itow': This function or variable may be unsafe. Consider using _itow_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstdlib.h(67): note: see declaration of '_itow'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(207): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstring.h(121): note: see declaration of 'wcscpy'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(208): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstring.h(101): note: see declaration of 'wcscat'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(219): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstring.h(121): note: see declaration of 'wcscpy'
+c:\users\andre\documents\visual studio 2015\projects\ei\so2\tp_multisneks\sharedmemorycontrollerdll\main.c(220): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstring.h(101): note: see declaration of 'wcscat'
+     Creating library C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SharedMemoryControllerDLL.lib and object C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SharedMemoryControllerDLL.exp
+  SharedMemoryControllerDLL.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SharedMemoryControllerDLL.dll
+  SharedMemoryControllerDLL.vcxproj -> C:\Users\Andre\Documents\Visual Studio 2015\Projects\EI\SO2\TP_MultiSneks\x64\Debug\SharedMemoryControllerDLL.pdb (Full PDB)
