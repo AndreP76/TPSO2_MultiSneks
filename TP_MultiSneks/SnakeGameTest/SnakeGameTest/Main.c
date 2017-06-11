@@ -31,7 +31,8 @@ typedef struct _msg {
 	char params[64];
 	DWORD ProcessID;
 	DWORD PlayerID;
-};
+	DWORD Active;
+}CommandMessage;
 typedef struct _time {
 	int Hours;
 	int Minutes;
@@ -93,7 +94,7 @@ typedef struct _snek {
 	BOOL MoveFlag;
 }Snake;
 
-Snake newSnake (int MovementState, Player* Owner, int SnakeLength, int MovementDirection) {
+Snake newSnake (int MovementState, Player* Owner, int SnakeLength, int MovementDirection, DWORD PID) {
 	Snake S;
 	S.MovementState=MovementState;
 	S.Owner=Owner;
@@ -101,6 +102,11 @@ Snake newSnake (int MovementState, Player* Owner, int SnakeLength, int MovementD
 	S.SnakeBody=malloc (sizeof (Coordinate) * S.SnakeLength);
 	S.TicksToMove=50;
 	S.MovementDirection=MovementDirection;
+	S.OwnerPID=PID;
+	S.DrunkOnVodka=0;
+	S.OilSpeedUp=0;
+	S.StuckOnGlue=0;
+	S.PlayerID=0;
 	return S;
 }
 
@@ -191,6 +197,16 @@ BOOL WINAPI SetGameEvent (LPVOID p) {
 	return TRUE;
 }
 
+Snake** GetSnakesByPID (Snake* Snakes, int SnakeTotal, DWORD PID) {
+	Snake** PIDSnakes=malloc (sizeof (Snake*) * 2);
+	for (size_t i=0; i < SnakeTotal; i++) {
+		if (Snakes[i].OwnerPID == PID) {
+			PIDSnakes[Snakes[i].PlayerID]=Snakes + i;
+		}
+	}
+	return PIDSnakes;
+}
+
 BOOL WINAPI RenderThread (LPVOID p) {
 	Map GameMap=*(Map*)p;
 	HANDLE GameTimerEvent=OpenEvent (EVENT_ALL_ACCESS, FALSE, _T ("GameTimer"));
@@ -243,6 +259,18 @@ int BuildMap (Snake* Snakes, int SnakeCount, Map* GameMap) {
 	}
 }
 
+void PushMessage (struct _msg* Queue, int messageMax, struct _msg* M) {
+	for (int i=0; i < messageMax; ++i) {
+		if (!Queue[i].Active) {
+			memcpy (Queue + i, M, sizeof (*M));
+		}
+	}
+}
+
+int KillSnake () {
+	return 0;
+}
+
 int main (void) {
 	Map GameMap;
 	GameConfig GCfg;
@@ -271,7 +299,7 @@ int main (void) {
 		GameMap.Board[i]=calloc (GameMap.MapCols, sizeof (short int));
 	_tprintf (_T ("Board created!"));
 
-	Snake S=newSnake (0, &P, 3, 'S');
+	Snake S=newSnake (0, &P, 3, 'S',GetCurrentProcessId());
 	S.SnakeBody[0].Col=0;
 	S.SnakeBody[1].Col=0;
 	S.SnakeBody[2].Col=0;
@@ -285,6 +313,9 @@ int main (void) {
 	struct _msg* messageBuffer;
 	int maxMessagesInBuffer=64;
 	messageBuffer=calloc (maxMessagesInBuffer, sizeof (struct _msg));
+	for (int i=0; i < maxMessagesInBuffer; ++i) {
+		memset (messageBuffer + i, 0x0, sizeof (struct _msg));
+	}
 
 	int MillisecondsInSection=1000;
 	HANDLE GameTimer=CreateWaitableTimer (NULL, TRUE, NULL);
@@ -360,12 +391,26 @@ int main (void) {
 		//Debug
 		if (kbhit ()) {
 			char c=_getch ();
-			if (c == 'w' || c == 'W') if (S.MovementDirection != 'S') { S.MovementDirection='N'; }
-			if (c == 's' || c == 'S') if (S.MovementDirection != 'N') { S.MovementDirection='S'; }
-			if (c == 'a' || c == 'A') if (S.MovementDirection != 'E') { S.MovementDirection='W'; }
-			if (c == 'd' || c == 'D') if (S.MovementDirection != 'W') { S.MovementDirection='E'; }
+			struct _msg m;
+			strcpy (m.command, "SETDIR");
+			m.PlayerID=0;
+			m.ProcessID=GetCurrentProcessId ();
+			m.Active=TRUE;
+			if (c == 'w' || c == 'W'){
+				strcpy (m.params, "N");
+			}
+			if (c == 's' || c == 'S'){
+				strcpy (m.params, "S");
+			}
+			if (c == 'a' || c == 'A'){
+				strcpy (m.params, "W");
+			}
+			if (c == 'd' || c == 'D'){
+				strcpy (m.params, "E"); 
+			}
 			if (c == 'g' || c == 'G') GrowSnake (&S);
 			if (c == 'b' || c == 'B') ShrinkSnake (&S);
+			PushMessage(messageBuffer,maxMessagesInBuffer,&m);
 		}
 	}
 

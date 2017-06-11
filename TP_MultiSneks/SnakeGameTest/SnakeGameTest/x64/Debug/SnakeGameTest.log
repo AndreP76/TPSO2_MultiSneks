@@ -1,0 +1,10 @@
+﻿  Main.c
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(186): warning C4013: 'KillSnake' undefined; assuming extern returning int
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(325): warning C4113: 'BOOL (__cdecl *)(LPVOID)' differs in parameter lists from 'PTIMERAPCROUTINE'
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(392): warning C4013: 'kbhit' undefined; assuming extern returning int
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(393): warning C4013: '_getch' undefined; assuming extern returning int
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(193): warning C4716: 'MoveSnake': must return a value
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(243): warning C4716: 'RenderThread': must return a value
+c:\users\andre\documents\github\tpso2_multisneks\tp_multisneks\snakegametest\snakegametest\main.c(260): warning C4716: 'BuildMap': must return a value
+  SnakeGameTest.vcxproj -> C:\Users\Andre\Documents\GitHub\TPSO2_MultiSneks\TP_MultiSneks\x64\Debug\SnakeGameTest.exe
+  SnakeGameTest.vcxproj -> C:\Users\Andre\Documents\GitHub\TPSO2_MultiSneks\TP_MultiSneks\x64\Debug\SnakeGameTest.pdb (Full PDB)
